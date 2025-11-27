@@ -33,4 +33,4 @@ class flatten_iterate:
 print("Flatten Iterator:")
 for item in flatten_iterate([1, 2, [3, [4], 5]]):
     print(item, end=" ")
-print()  # Output: 1 2 3 4 5
+print()  
