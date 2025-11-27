@@ -1,10 +1,5 @@
 class flatten_iterate:
-    """
-    Iterator that flattens a nested structure without creating additional lists.
     
-    Args:
-        nested_structure: Potentially nested list structure to flatten
-    """
     def __init__(self, nested_structure):
         self.stack = [iter([nested_structure])]
         self.current_iter = None
@@ -20,7 +15,7 @@ class flatten_iterate:
             try:
                 element = next(self.current_iter)
                 
-                # If element is a list, push its iterator onto stack
+                
                 if isinstance(element, list):
                     self.stack.append(iter(element))
                     self.current_iter = None
@@ -28,13 +23,13 @@ class flatten_iterate:
                     return element
                     
             except StopIteration:
-                # Current iterator exhausted, pop from stack
+                
                 self.stack.pop()
                 self.current_iter = None
         
         raise StopIteration
 
-# Example usage
+
 print("Flatten Iterator:")
 for item in flatten_iterate([1, 2, [3, [4], 5]]):
     print(item, end=" ")
