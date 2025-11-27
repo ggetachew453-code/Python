@@ -16,7 +16,7 @@ def generate_primes(n):
 
     for num in range(3, n, 2):
         is_prime = True
-        # Check divisibility up to sqrt(num)
+        
         for i in range(3, int(num**0.5) + 1, 2):
             if num % i == 0:
                 is_prime = False
