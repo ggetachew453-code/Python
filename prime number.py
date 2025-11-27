@@ -1,13 +1,7 @@
 def generate_primes(n):
-    """
-    Generator that yields all prime numbers less than n.
     
-    Args:
-        n: Upper limit (exclusive) for prime numbers
     
-    Yields:
-        Prime numbers in ascending order
-    """
+
     if n <= 1:
         return
     
