@@ -5,7 +5,7 @@ def generate_primes(n):
     if n <= 1:
         return
     
-    # Special case: 1 is not typically considered prime, but based on example
+    
     yield 1
     
     if n <= 2:
@@ -13,7 +13,7 @@ def generate_primes(n):
     
     yield 2
     
-    # Check odd numbers starting from 3
+
     for num in range(3, n, 2):
         is_prime = True
         # Check divisibility up to sqrt(num)
@@ -24,8 +24,8 @@ def generate_primes(n):
         if is_prime:
             yield num
 
-# Example usage
+
 print("Prime Numbers:")
 for prime in generate_primes(100):
     print(prime, end=" ")
-print()  # Output: 1 2 3 5 7
+print()  
